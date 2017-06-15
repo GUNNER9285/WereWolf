@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', "Home")
+@section('title', "Card")
 
 @section('content')
     <div class="row">
@@ -30,8 +30,5 @@
             </div>
         @endforeach
     </div>
-
-
 <a href="{{ url('/card/create') }}" class="btn btn-primary">Create</a>
-
 @stop

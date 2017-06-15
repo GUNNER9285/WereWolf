@@ -5,9 +5,7 @@
 @section('content')
 
     {{ Form::model($card,['url' => '/card/'.$card->id, 'method' => 'patch']) }}
-
-        @include('Card._form')
-
+        @include('Card._form', ['submitBtn' => 'Finish'])
     {{ Form::close() }}
 
 @stop

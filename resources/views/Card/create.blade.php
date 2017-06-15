@@ -5,8 +5,7 @@
 @section('content')
 
     {{ Form::open(['url' => '/card']) }}
-
-        @include('Card._form')
+        @include('Card._form', ['submitBtn' => 'Create'])
 
     {{ Form::close() }}
 

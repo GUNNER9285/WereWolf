@@ -28,3 +28,5 @@ Route::patch('card/{id}','CardController@update');
 
 Route::delete('/card/{id}', 'CardController@destroy');
 
+Route::get('/game', 'GameController@index');
+

@@ -10,4 +10,4 @@
 {{Form::label('point', 'Point')}}
 {{Form::text('point')}}
 <br>
-{{Form::submit('Create')}}
+{{Form::submit($submitBtn)}}

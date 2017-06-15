@@ -164,6 +164,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+
+        Orangehill\Iseed\IseedServiceProvider::class,
         /*
          * Package Service Providers...
          */
