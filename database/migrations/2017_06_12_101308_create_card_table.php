@@ -19,7 +19,6 @@ class CreateCardTable extends Migration
             $table->text('effect');
             $table->integer('image');
             $table->integer('point');
-            $table->string('description');
             $table->timestamps();
         });
     }

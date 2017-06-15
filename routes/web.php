@@ -15,4 +15,16 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/','CardController@home');
+Route::get('/home','CardController@home');
+
 Route::get('/card', 'CardController@index');
+
+Route::get('/card/create', 'CardController@create');
+Route::post('/card','CardController@store');
+
+Route::get('/card/{id}/edit', 'CardController@edit');
+Route::patch('card/{id}','CardController@update');
+
+Route::delete('/card/{id}', 'CardController@destroy');
+
