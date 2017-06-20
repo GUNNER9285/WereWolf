@@ -20,6 +20,7 @@
                     </ul>
                 </li>
                 <li><a href = {{url('/card')}}> Card </a></li>
+                <li><a href =  {{url ('/game')}}>History</a></li>
                 <li><a href =  {{url ('/card/create')}}>Guide</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

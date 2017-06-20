@@ -30,3 +30,7 @@ Route::delete('/card/{id}', 'CardController@destroy');
 
 Route::get('/game', 'GameController@index');
 
+Route::get('/newgame', 'GameController@newgame');
+Route::post('/selectcard', 'GameController@store');
+Route::get('game/{id}/selectcard', 'GameController@selectcard');
+Route::post('/start', 'GameController@start');

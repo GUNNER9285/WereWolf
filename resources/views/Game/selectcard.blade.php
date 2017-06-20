@@ -10,16 +10,23 @@
 </head>
 <body>
 
-@include('navbar')
 <div class = "container">
-    <br>
-        <center>
-            <img src="https://cdn.shopify.com/s/files/1/0740/4855/products/UWDX-BOX-COVER.jpg?v=1461751846" class="img-responsive" height="250px" width="500px">
-    <br>
-    <h3> Cr. <a href="https://beziergames.com"> https://beziergames.com </a> </h3>
-        </center>
+    <h1> Select Card for {{$game->name}} </h1>
+    {{ Form::open(['url' => '/selectcard']) }}
+    @for($i=0; $i<$game->player; ++$i)
+            {{ Form::label('Select Card')}}
+            <select name="card{{$i}}">
+                @foreach($cards as $card)
+                    <option value="{{$card->id}}">{{$card->name}}  {{$card->point}}</option>
+                @endforeach
+            </select>
+        <br>
+    @endfor
+    {{Form::submit('PlayGame')}}
+    {{ Form::close() }}
 </div>
-@yield('Footer')
+
 
 </body>
 </html>
+
