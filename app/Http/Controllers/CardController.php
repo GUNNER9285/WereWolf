@@ -35,7 +35,7 @@ class CardController extends Controller
         return redirect() -> action('CardController@index');
     }
 
-    public function home()
+    public function hometo()
     {
         return view('home');
     }

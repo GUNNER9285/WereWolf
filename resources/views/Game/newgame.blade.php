@@ -26,8 +26,6 @@
         {{Form::submit('PlayGame')}}
     {{ Form::close() }}
 </div>
-
-
 </body>
 </html>
 

@@ -14,4 +14,8 @@ class Game extends Model
     {
         return $this->belongsToMany('App\Card','card_game','id_game','id_card');
     }
+    public function users()
+    {
+        return $this->belongsToMany('App\User','user_game','id_game','id_user');
+    }
 }

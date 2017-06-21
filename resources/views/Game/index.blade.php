@@ -1,23 +1,29 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title', "Card")
 
 @section('content')
-    <div class="row">
-        @foreach($games as $game)
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="well">
-                    Name : {{$game -> name}}
-                    <br>
-                    Player : {{$game -> player}}
-                    <br>
-                    @foreach($game->cards as $card)
-                        Card : {{$card -> name}}
+    <div class = "container">
+        <div class="row">
+            @foreach($games as $game)
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="well">
+                        Room : {{$game -> id}}
                         <br>
-                    @endforeach
+                        Name : {{$game -> name}}
+                        <br>
+                        Player : {{$game -> player}}
+                        <br>
+                        @foreach($game->cards as $card)
+                            Card : {{$card -> name}}
+                            <br>
+                        @endforeach
+                        <hr>
+                        <a href="{{ url('/join_game/'.$game->id) }}" class="btn btn-success">Join Game</a>
+                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
+        <a href="{{ url('/newgame') }}" class="btn btn-primary">Create Room</a>
     </div>
-
 @stop

@@ -15,8 +15,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/','CardController@home');
-Route::get('/home','CardController@home');
+Route::get('/','CardController@hometo');
+Route::get('/hometo','CardController@hometo');
+Route::get('/guide', 'GameController@guide');
 
 Route::get('/card', 'CardController@index');
 
@@ -34,3 +35,8 @@ Route::get('/newgame', 'GameController@newgame');
 Route::post('/selectcard', 'GameController@store');
 Route::get('game/{id}/selectcard', 'GameController@selectcard');
 Route::post('/start', 'GameController@start');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/join_game/{id}','GameController@join');
