@@ -57,6 +57,26 @@ class CardTableSeeder extends Seeder
                 'created_at' => '2017-06-13 08:41:41',
                 'updated_at' => '2017-06-13 08:41:41',
             ),
+            4 => 
+            array (
+                'id' => 6,
+                'name' => 'BODYGUARD',
+                'effect' => 'Each night, choose a player who cannot be eliminated that night.',
+                'image' => 5,
+                'point' => 3,
+                'created_at' => '2017-06-20 07:44:27',
+                'updated_at' => '2017-06-20 07:44:27',
+            ),
+            5 => 
+            array (
+                'id' => 7,
+                'name' => 'SEER',
+                'effect' => 'Each night choose a player to learn if he is a Villager or Werewolf.',
+                'image' => 6,
+                'point' => 7,
+                'created_at' => '2017-06-20 07:46:06',
+                'updated_at' => '2017-06-20 07:46:06',
+            ),
         ));
         
         

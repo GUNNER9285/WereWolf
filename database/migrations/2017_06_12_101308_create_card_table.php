@@ -17,11 +17,9 @@ class CreateCardTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('effect');
-            $table->integer('image');
+            $table->string('image');
             $table->integer('point');
             $table->timestamps();
-
-
         });
     }
 

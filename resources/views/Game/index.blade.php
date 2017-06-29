@@ -19,7 +19,8 @@
                             <br>
                         @endforeach
                         <hr>
-                        <a href="{{ url('/join_game/'.$game->id) }}" class="btn btn-success">Join Game</a>
+                        <a href="{{ url('game/'.$game->id.'/selectcard') }}" class="btn btn-success">Select Card</a>
+                        <a href="{{ url('/join_game/'.$game->id) }}" class="btn btn-primary">Join Game</a>
                     </div>
                 </div>
             @endforeach
