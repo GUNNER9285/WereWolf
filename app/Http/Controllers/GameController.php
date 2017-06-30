@@ -65,7 +65,8 @@ class GameController extends Controller
             $id = $card_data;
             fwrite($path,$id." ");
         }
-        return view('Game.selectcard',['cards' => $cards, 'game' => $game]);
+        $games = Game::all();
+        return view('Game.index',['games' => $games]);
     }
 
     public function join($id)
@@ -88,7 +89,7 @@ class GameController extends Controller
         $id_card = 0;
 
         while(true){
-            $rand = rand(0,$game->player);
+            $rand = rand(0,sizeof($list)-1);
             if($list[$rand] != 0){
                 $id_card = $list[$rand];
                 $list[$rand] = 0;

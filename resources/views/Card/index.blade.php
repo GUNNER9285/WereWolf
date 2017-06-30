@@ -7,14 +7,13 @@
     <div class="row">
         @foreach($cards as $card)
             <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="well" style="height: 225px">
+                <div class="well" style="height: 250px">
                     Name : {{$card -> name}}
                     <br>
                     Effect : {{$card -> effect}}
                     <br>
-                    Image : {{$card -> image}}
-                    <br>
                     Point : {{$card -> point}}
+                    <br>
                     <br>
                     <hr>
                     <div class="col-md-6">

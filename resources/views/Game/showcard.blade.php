@@ -11,9 +11,9 @@
                         <br>
                         Effect : {{$card -> effect}}
                         <br>
-                        Image : {{$card -> image}}
-                        <br>
                         Point : {{$card -> point}}
+                        <br>
+                        <img class="img-responsive img-thumbnail" src="{{ URL::to($card -> image) }}" style="..." alt="">
                         <br>
                     </div>
                 </div>
