@@ -7,7 +7,7 @@
     <div class="row">
         @foreach($cards as $card)
             <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="well" style="height: 250px">
+                <div class="well" style="height: 300px">
                     Name : {{$card -> name}}
                     <br>
                     Effect : {{$card -> effect}}

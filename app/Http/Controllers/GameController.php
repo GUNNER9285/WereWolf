@@ -44,8 +44,12 @@ class GameController extends Controller
 
     public function selectcard($id)
     {
+        if(isset(Auth::user()->id) == null){
+            return 'Please Login';
+        }
         $cards = Card::all();
         $game = Game::find($id);
+        file_put_contents(public_path().'/player.txt', "");
         return view('Game.selectcard',['cards' => $cards, 'game' => $game]);
         //return $carddata;
     }
@@ -65,12 +69,14 @@ class GameController extends Controller
             $id = $card_data;
             fwrite($path,$id." ");
         }
-        $games = Game::all();
-        return view('Game.index',['games' => $games]);
+        return redirect() -> action('GameController@index');
     }
 
     public function join($id)
     {
+        if(isset(Auth::user()->id) == null){
+            return 'Please Login';
+        }
         $user_game = [
             'id_user'=> Auth::user()->id ,
             'id_game'=>$id
@@ -106,6 +112,7 @@ class GameController extends Controller
         }
         $card = Card::find($id_card);
         return view('Game.showcard',['card' => $card]);
+
 
         //return $game->cards$file[$rand];
         //return $game->cards;
