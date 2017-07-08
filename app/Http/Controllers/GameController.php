@@ -114,7 +114,12 @@ class GameController extends Controller
             }
         }
         $card = Card::find($id_card);
-        return view('Game.showcard',['card' => $card]);
+        if ($id_card == 8){
+            return view('Game.moderator',['card' => $card]);
+        }
+        else {
+            return view('Game.showcard',['card' => $card]);
+        }
 
 
         //return $game->cards$file[$rand];
