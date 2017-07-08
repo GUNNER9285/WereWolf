@@ -4,6 +4,8 @@
 
 @section('content')
     <div class = "container">
+        <a href="{{ url('/newgame') }}" class="btn btn-primary">Create Room</a>
+        <br><br>
         <div class="row">
             @foreach($games as $game)
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -25,6 +27,6 @@
                 </div>
             @endforeach
         </div>
-        <a href="{{ url('/newgame') }}" class="btn btn-primary">Create Room</a>
+        {{ $games->links() }}
     </div>
 @stop

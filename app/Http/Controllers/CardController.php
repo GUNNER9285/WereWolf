@@ -10,7 +10,7 @@ class CardController extends Controller
     //pubf
     public function index()
     {
-        $cards = Card::all();
+        $cards = Card::paginate(9);
         return view('Card.index',['cards' => $cards]);
         //return $cards;
     }

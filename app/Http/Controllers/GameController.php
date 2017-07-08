@@ -13,7 +13,7 @@ class GameController extends Controller
 {
     public function index()
     {
-        $games = Game::all();
+        $games = Game::paginate(12);
         /*
         foreach ($games as $game){
             $game->cards;
@@ -33,6 +33,9 @@ class GameController extends Controller
 
     public function newgame()
     {
+        if(isset(Auth::user()->id) == null){
+            return view('Game.nonlogin');
+        }
         return view('Game.newgame');
     }
     public function store(Request $request){
@@ -45,7 +48,7 @@ class GameController extends Controller
     public function selectcard($id)
     {
         if(isset(Auth::user()->id) == null){
-            return 'Please Login';
+            return view('Game.nonlogin');
         }
         $cards = Card::all();
         $game = Game::find($id);
@@ -75,7 +78,7 @@ class GameController extends Controller
     public function join($id)
     {
         if(isset(Auth::user()->id) == null){
-            return 'Please Login';
+            return view('Game.nonlogin');
         }
         $user_game = [
             'id_user'=> Auth::user()->id ,
