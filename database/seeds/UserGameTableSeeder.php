@@ -19,21 +19,9 @@ class UserGameTableSeeder extends Seeder
         \DB::table('user_game')->insert(array (
             0 => 
             array (
-                'id' => 1,
+                'id' => 8,
                 'id_user' => 2,
-                'id_game' => 5,
-            ),
-            1 => 
-            array (
-                'id' => 3,
-                'id_user' => 3,
-                'id_game' => 5,
-            ),
-            2 => 
-            array (
-                'id' => 4,
-                'id_user' => 3,
-                'id_game' => 6,
+                'id_game' => 9,
             ),
         ));
         
