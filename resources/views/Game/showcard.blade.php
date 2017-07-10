@@ -9,7 +9,7 @@
                     <div class="well" style="height: 225px">
                         Name : {{$card -> name}}
                         <br>
-                        Effect : {{$card -> effect}}
+                        Effect : {!! $card -> effect !!}
                         <br>
                         Point : {{$card -> point}}
                         <br>
