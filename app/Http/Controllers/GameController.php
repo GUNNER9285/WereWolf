@@ -140,6 +140,6 @@ class GameController extends Controller
         $game -> delete();
         return redirect() -> action('CardController@index');
         */
-        return 'แยร่ ยังทำไม่เสร็จจ้า';
+        return 'แบร่ ยังทำไม่เสร็จจ้า';
     }
 }
