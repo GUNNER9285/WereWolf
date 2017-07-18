@@ -21,8 +21,16 @@
                             <br>
                         @endforeach
                         <hr>
-                        <a href="{{ url('game/'.$game->id.'/selectcard') }}" class="btn btn-success">Select Card</a>
-                        <a href="{{ url('/join_game/'.$game->id) }}" class="btn btn-primary">Join Game</a>
+                        <div style="display: inline">
+                            <a href="{{ url('game/'.$game->id.'/selectcard') }}" class="btn btn-success">Select Card</a>
+                            <a href="{{ url('/join_game/'.$game->id) }}" class="btn btn-primary">Join Game</a>
+                            {{ Form::model($game,['url' => '/game/'.$game->id.'/delete', 'method' => 'delete',
+                            'style' => 'display:inline']) }}
+                            <button class = 'btn btn-danger' type="submit">
+                                Delete
+                            </button>
+                            {{ Form::close() }}
+                        </div>
                     </div>
                 </div>
             @endforeach

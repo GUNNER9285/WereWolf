@@ -10,8 +10,9 @@ class CardController extends Controller
     //pubf
     public function index()
     {
+
         $cards = Card::paginate(9);
-        return view('Card.index',['cards' => $cards]);
+        return view('Card.indexEx',['cards' => $cards]);
         //return $cards;
     }
 
@@ -32,7 +33,7 @@ class CardController extends Controller
         $card = $request -> all();
         Card::create($card);
 
-        return redirect() -> action('CardController@index');
+        return redirect() -> action('CardController@indexEx');
     }
 
     public function hometo()

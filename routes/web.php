@@ -40,3 +40,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/join_game/{id}','GameController@join');
+
+Route::delete('/game/{id}/delete', 'GameController@destroy');

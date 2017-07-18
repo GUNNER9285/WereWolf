@@ -127,5 +127,19 @@ class GameController extends Controller
         //return view('Game.showcard',['card' => $card]);
     }
 
+    public function destroy($id)
+    {
+        /*
+        file_put_contents(public_path().'/player.txt', "");
+        $game = Game::find($id);
+        for($i=0; $i<$game->player; ++$i){
+            //$card_data = $game::find($id_card);
 
+
+        }
+        $game -> delete();
+        return redirect() -> action('CardController@index');
+        */
+        return 'แยร่ ยังทำไม่เสร็จจ้า';
+    }
 }
